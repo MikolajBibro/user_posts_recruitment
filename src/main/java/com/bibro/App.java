@@ -18,6 +18,7 @@ public class App {
 
         System.out.println("Najblizsi uzytkownicy");
         statistics.findClosestUsers().forEach((k, v) -> System.out.println("dla " + k + " najblizszy to " + v));
+
         System.out.println("Nieunikalne tytuly");
         statistics.getNonUniquePosts().forEach(System.out::println);
     }
