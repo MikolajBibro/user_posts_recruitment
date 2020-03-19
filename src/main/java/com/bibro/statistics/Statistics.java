@@ -47,7 +47,7 @@ public class Statistics {
                 .collect(Collectors.toMap(identity(), this::findClosestUser));
     }
 
-    public User findClosestUser(User user) {
+    private User findClosestUser(User user) {
         Comparator<User> comparator = Comparator.comparing(u -> u.distanceBetweenUser(user));
 
         return users
@@ -56,8 +56,5 @@ public class Statistics {
                 .min(comparator)
                 .orElseThrow(NoSuchElementException::new);
     }
-
-
-
 }
 
