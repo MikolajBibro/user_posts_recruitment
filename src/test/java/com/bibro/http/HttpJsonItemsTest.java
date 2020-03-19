@@ -57,7 +57,6 @@ public class HttpJsonItemsTest {
 
         Post post = new Post(1, 1, "sunt aut facere repellat provident occaecati excepturi optio reprehenderit");
 
-
         stubFor(get(urlEqualTo("/posts"))
                 .willReturn(aResponse()
                         .withBody(new String(getClass().getResourceAsStream("/posts.json").readAllBytes()))));
