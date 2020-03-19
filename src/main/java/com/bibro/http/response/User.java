@@ -6,9 +6,9 @@ import lombok.*;
 @Value
 public class User {
 
-    private int id;
-    private String username;
-    private Address address;
+    int id;
+    String username;
+    Address address;
 
     public double distanceBetweenUser(User user) {
         double longitude1 = Double.parseDouble(this.getAddress().getGeo().getLng());

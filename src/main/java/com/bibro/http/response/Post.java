@@ -5,7 +5,7 @@ import lombok.*;
 @Value
 public class Post {
 
-    private int userId;
-    private int id;
-    private String title;
+    int userId;
+    int id;
+    String title;
 }

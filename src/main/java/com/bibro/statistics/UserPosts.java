@@ -6,8 +6,8 @@ import lombok.Value;
 @Value
 public class UserPosts {
 
-    private User user;
-    private int posts;
+    User user;
+    int posts;
 
     @Override
     public String toString() {
