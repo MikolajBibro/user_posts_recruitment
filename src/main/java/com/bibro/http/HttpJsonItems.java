@@ -18,10 +18,14 @@ import java.util.List;
 @AllArgsConstructor
 public class HttpJsonItems<T> {
 
-    private final HttpClient httpClient = HttpClient.newHttpClient();
-    private final Gson gson = new Gson();
+    private final HttpClient httpClient;
+    private final Gson gson;
     private final Class<T> clazz;
     private final String url;
+
+    public HttpJsonItems(Class<T> clazz, String url) {
+        this(HttpClient.newHttpClient(), new Gson(), clazz, url);
+    }
 
     public List<T> list() {
         String json = getResponse(url);
